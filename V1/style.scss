@@ -103,11 +103,11 @@ main {
             height: 25vh;
             box-sizing: content-box;
             position: relative;
-            background-image: url(img/image.jpg);
+            background-color: $divider-color;
             background-position: center;
             background-size: cover;
-        
           }
+
           .triangle-divider:after {
             content: "";
             position: absolute;
@@ -238,6 +238,7 @@ main {
             position: relative;
             width: 100vw;
           }
+
           #base-divider:before {
             border-top: 5vh solid $divider-color;
             border-left: 50vw solid transparent;
@@ -261,7 +262,7 @@ main {
                     font-size: 3em;
                     width: 12vw;
                     overflow: hidden;
-                    color: royalblue;
+                    color: wheat;
                 }
   
                 h2 {
@@ -272,6 +273,39 @@ main {
           }
     }
     /* KILDE: https://css-tricks.com/the-shapes-of-css/ */
+
+    article.kontakt {
+        margin-bottom: 14vh;
+        padding: 0 3vw;
+
+        input, textarea {
+            padding: 2vh 2vw;
+            border-radius: 4px;
+        }
+
+        input[type=text], input[type=number], textarea {
+            width: 100%;
+            margin-bottom: 3vh;
+            border: 1px solid $divider-color;
+            font-family: $p-family;
+        }
+
+        #besked {
+            height: 20vh;
+        }
+
+        input[type=submit] {
+            width: 30%;
+            background-color: $divider-color;
+            color: white;
+            font-family: $p-family;
+            font-weight: bold;
+        }
+
+        input[type=submit]:hover {
+            filter: invert(1);
+        }
+    }
 }
 footer {
     display: flex;
@@ -281,7 +315,7 @@ footer {
     bottom: 0;
     height: $nav-height;
     width: 100vw;
-    padding: 0.5vh 25vw;
+    padding: 0.5vh 15vw;
     font-size: 2.2em;
     background-color: $divider-color;
     border-top: solid #444 2px;
