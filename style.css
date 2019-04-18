@@ -1,0 +1,196 @@
+/* Make the default for margin and padding 0 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+/* Defaults */
+h1,
+h2 {
+  text-align: center;
+  margin: auto auto;
+  text-transform: uppercase;
+  font-family: "Segoe UI", sans-serif; }
+
+h1 {
+  color: white;
+  font-size: 1.6em;
+  font-weight: 900; }
+
+h2 {
+  color: black;
+  font-size: 1.2em;
+  font-weight: 800; }
+
+p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9em;
+  margin-top: 1vh; }
+
+/* Navigationbaren mobil */
+#nav {
+  overflow: hidden;
+  background-color: #333;
+  border-bottom: solid #444 2px;
+  position: fixed;
+  height: 7vh;
+  z-index: 1;
+  width: 100vw;
+  top: 0; }
+  #nav #navLogo {
+    text-align: left;
+    margin-left: 3vw;
+    font-size: 2em; }
+  #nav #navItems {
+    display: none; }
+  #nav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 0.8em;
+    display: block;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1em; }
+  #nav .icon {
+    color: white;
+    font-size: 2em;
+    background: transparent;
+    border: none;
+    display: block;
+    position: absolute;
+    height: 6vh;
+    right: 3vw;
+    top: 0;
+    margin: 0.5vh 0; }
+
+main {
+  /* KILDE: https://css-tricks.com/the-shapes-of-css/ */ }
+  main .filler {
+    height: 7vh; }
+  main article.forord {
+    /*KILDE: https://css-tricks.com/the-shapes-of-css/ FLAG*/ }
+    main article.forord .triangle-divider {
+      width: 100vw;
+      height: 25vh;
+      box-sizing: content-box;
+      position: relative;
+      background-image: url(img/image.jpg);
+      background-position: center;
+      background-size: cover; }
+    main article.forord .triangle-divider:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      border-bottom: 5vh solid white;
+      border-left: 50vw solid transparent;
+      border-right: 50vw solid transparent; }
+    main article.forord .circles {
+      padding: 3vh 5vh 0;
+      margin-top: -20vh; }
+      main article.forord .circles .textbox {
+        margin: 3vh 0 0; }
+      main article.forord .circles .circle {
+        margin: auto;
+        position: relative;
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat; }
+      main article.forord .circles #c1 {
+        background-color: wheat; }
+      main article.forord .circles #visionCircle {
+        background-color: wheat; }
+      main article.forord .circles #missionCircle {
+        background-color: wheat; }
+  main article.produkter {
+    position: relative;
+    overflow: hidden; }
+    main article.produkter .skew {
+      position: absolute;
+      width: 100%;
+      height: 20vh;
+      background-color: #333;
+      transform: skewY(-6deg);
+      transform-origin: top-left;
+      z-index: -1; }
+    main article.produkter h1 {
+      margin-top: 3vh; }
+    main article.produkter .pFirkanter {
+      margin: 3vh 5vw 0;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat; }
+    main article.produkter .pFirkant {
+      margin: auto;
+      width: 300px;
+      height: 150px;
+      background-color: wheat; }
+    main article.produkter .textbox {
+      margin: 3vh auto;
+      padding: 0 2vw;
+      width: 300px; }
+  main article.services {
+    padding: 3vh 0;
+    background-color: #333; }
+    main article.services #sFelter {
+      margin: 3vh 5vw; }
+    main article.services #headerFelt1 {
+      border-top: solid white 1px; }
+    main article.services .headerFelt {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+      height: 5vh;
+      padding: 0 5vw;
+      border-bottom: solid white 1px; }
+      main article.services .headerFelt h2 {
+        margin: 0;
+        text-align: left; }
+  main #om {
+    background-color: #333; }
+  main article.om #base-divider {
+    background: #333;
+    display: inline-block;
+    height: 10vh;
+    position: relative;
+    width: 100vw; }
+  main article.om #base-divider:before {
+    border-top: 5vh solid #333;
+    border-left: 50vw solid transparent;
+    border-right: 50vw solid transparent;
+    content: "";
+    height: 0;
+    left: 0;
+    position: absolute;
+    bottom: -5vh;
+    width: 0; }
+  main article.om .omContent {
+    margin: 7vh 3vw 0; }
+    main article.om .omContent .omHeader {
+      display: flex;
+      border-bottom: solid black 1px; }
+      main article.om .omContent .omHeader i {
+        font-size: 3em;
+        width: 12vw;
+        overflow: hidden;
+        color: royalblue; }
+      main article.om .omContent .omHeader h2 {
+        width: 82vw;
+        padding-right: 12vw; }
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  height: 7vh;
+  width: 100vw;
+  padding: 0.5vh 25vw;
+  font-size: 2.2em;
+  background-color: #333;
+  border-top: solid #444 2px;
+  color: white; }

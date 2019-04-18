@@ -1,0 +1,289 @@
+/* Make the default for margin and padding 0 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Defaults */
+// Fonts
+$h-family: "Segoe UI",
+sans-serif;
+$p-family: "Open Sans",
+sans-serif;
+
+// Colors
+$divider-color: #333;
+
+// Height on nav top and bottom 
+$nav-height: 7vh;
+
+h1,
+h2 {
+    text-align: center;
+    margin: auto auto;
+    text-transform: uppercase;
+    font-family: $h-family;
+}
+
+h1 {
+    color: white;
+    font-size: 1.6em;
+    font-weight: 900;
+}
+
+h2 {
+    color: black;
+    font-size: 1.2em;
+    font-weight: 800;
+}
+
+p {
+    font-family: $p-family;
+    font-size: 0.9em;
+    margin-top: 1vh;
+}
+
+
+/* Navigationbaren mobil */
+#nav {
+    overflow: hidden;
+    background-color: #333;
+    border-bottom: solid #444 2px;
+    position: fixed;
+    height: $nav-height;
+    z-index: 1;
+    width: 100vw;
+    top: 0;
+
+    #navLogo {
+        text-align: left;
+        margin-left: 3vw;
+        font-size: 2em;
+    }
+
+    #navItems {
+        display: none;
+    }
+
+    a {
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 0.8em;
+        display: block;
+        font-family: $p-family;
+        font-size: 1em;
+    }
+
+    .icon {
+        color: white;
+        font-size: 2em;
+        background: transparent;
+        border: none;
+        display: block;
+        position: absolute;
+        height: 6vh;
+        right: 3vw;
+        top: 0;
+        margin: 0.5vh 0;
+    }
+}
+
+main {
+    .filler {
+        height: $nav-height;
+    }
+
+    article.forord {
+
+        .triangle-divider {
+            width: 100vw;
+            height: 25vh;
+            box-sizing: content-box;
+            position: relative;
+            background-image: url(img/image.jpg);
+            background-position: center;
+            background-size: cover;
+        
+          }
+          .triangle-divider:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            border-bottom: 5vh solid white;
+            border-left: 50vw solid transparent;
+            border-right: 50vw solid transparent;
+          }
+
+
+        /*KILDE: https://css-tricks.com/the-shapes-of-css/ FLAG*/
+
+        .circles {
+            padding: 3vh 5vh 0;
+            margin-top: -20vh;
+             
+            .textbox {
+                margin: 3vh 0 0;
+            }
+
+            .circle {
+                margin: auto;
+                position: relative;
+                border-radius: 50%;
+                width: 150px;
+                height: 150px;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+            #c1 {
+                background-color: wheat;
+            }
+
+            #visionCircle {
+                background-color: wheat;
+            }
+
+            #missionCircle {
+                background-color: wheat;
+            }
+        }
+
+    }
+
+    article.produkter {
+        position: relative;
+        overflow: hidden;
+
+        .skew {
+            position: absolute;
+            width: 100%;
+            height: 20vh;
+            background-color: $divider-color;
+            transform: skewY(-6deg);
+            transform-origin: top-left;
+            z-index: -1;
+        }
+
+        h1 {
+            margin-top: 3vh;
+        }
+        
+        .pFirkanter {
+            margin: 3vh 5vw 0;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .pFirkant {
+            margin: auto;
+            width: 300px;
+            height: 150px;
+            background-color: wheat;
+        }
+
+        #p1 {}
+        #p2 {}
+        #p3 {}
+
+        .textbox {
+            margin: 3vh auto;
+            padding: 0 2vw;
+            width: 300px;
+        }
+    }
+
+    article.services {
+        padding: 3vh 0;
+        background-color: $divider-color;
+
+        #sFelter {
+            margin: 3vh 5vw;
+        }
+
+        #headerFelt1 {
+            border-top: solid white 1px;
+        }
+
+        .headerFelt {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+            height: 5vh;
+            padding: 0 5vw;
+            
+            border-bottom: solid white 1px;
+
+            h2 {
+                margin: 0;
+                text-align: left;
+            }
+        }
+    }
+    
+    #om {
+        background-color: $divider-color;
+    }
+    article.om {
+
+        #base-divider {
+            background: $divider-color;
+            display: inline-block;
+            height: 10vh;
+            position: relative;
+            width: 100vw;
+          }
+          #base-divider:before {
+            border-top: 5vh solid $divider-color;
+            border-left: 50vw solid transparent;
+            border-right: 50vw solid transparent;
+            content: "";
+            height: 0;
+            left: 0;
+            position: absolute;
+            bottom: -5vh;
+            width: 0;
+          }
+
+          .omContent {
+              margin: 7vh 3vw 0;
+
+              .omHeader {
+                display: flex;
+                border-bottom: solid black 1px;
+
+                i {
+                    font-size: 3em;
+                    width: 12vw;
+                    overflow: hidden;
+                    color: royalblue;
+                }
+  
+                h2 {
+                    width: 82vw;
+                    padding-right: 12vw;
+                }
+              }
+          }
+    }
+    /* KILDE: https://css-tricks.com/the-shapes-of-css/ */
+}
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    height: $nav-height;
+    width: 100vw;
+    padding: 0.5vh 25vw;
+    font-size: 2.2em;
+    background-color: $divider-color;
+    border-top: solid #444 2px;
+    color: white;
+}
