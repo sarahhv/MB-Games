@@ -213,5 +213,6 @@ footer {
   padding: 0.5vh 15vw;
   font-size: 2.2em;
   background-color: #333;
-  border-top: solid #444 2px;
-  color: white; }
+  border-top: solid #444 2px; }
+  footer a {
+    color: white; }

@@ -319,5 +319,8 @@ footer {
     font-size: 2.2em;
     background-color: $divider-color;
     border-top: solid #444 2px;
-    color: white;
+
+    a {
+        color: white;
+    }
 }
