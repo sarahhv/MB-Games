@@ -42,3 +42,5 @@ document.querySelector('input[type="button"]').addEventListener('click', ()=> {
 	document.getElementById("kontaktFormular").reset();
 	alert("Din besked er sendt!");
 });
+
+/* Inspirations-KILDE: https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_form_reset */

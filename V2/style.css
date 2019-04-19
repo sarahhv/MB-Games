@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Make the default for margin and padding 0 */
 * {
   box-sizing: border-box;
@@ -104,11 +105,11 @@ main {
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat; }
-      main article.forord .circles #c1 {
+      main article.forord .circles #kortInfo {
         background-color: wheat; }
-      main article.forord .circles #visionCircle {
+      main article.forord .circles #mission-visionCircle {
         background-color: wheat; }
-      main article.forord .circles #missionCircle {
+      main article.forord .circles #værdierCircle {
         background-color: wheat; }
   main article.produkter {
     position: relative;
