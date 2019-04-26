@@ -49,17 +49,18 @@ p {
     margin-left: 3vw;
     color: white; }
   #nav #navItems {
-    display: none; }
-  #nav a {
-    color: white;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 0.9em;
-    display: block;
-    font-family: "Open Sans", sans-serif; }
-  #nav a:active,
-  #nav a:hover {
-    color: #d6af72 !important; }
+    display: none;
+    list-style-type: none; }
+    #nav #navItems a {
+      color: white;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 1.1em;
+      display: block;
+      font-family: "Open Sans", sans-serif; }
+    #nav #navItems a:active,
+    #nav #navItems a:hover {
+      color: #d6af72 !important; }
   #nav .icon {
     color: white;
     font-size: 2em;
@@ -80,12 +81,15 @@ main {
     /*KILDE: https://css-tricks.com/the-shapes-of-css/ FLAG*/ }
     main article.forord .triangle-divider {
       width: 100%;
-      height: 25vh;
+      height: auto;
       box-sizing: content-box;
       position: relative;
       background-color: #333;
       background-position: center;
       background-size: cover; }
+      main article.forord .triangle-divider p {
+        padding: 2vh 5vw 20vh;
+        color: white; }
     main article.forord .triangle-divider:after {
       content: "";
       position: absolute;
@@ -109,11 +113,11 @@ main {
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat; }
-      main article.forord .circles #kortInfo {
-        background-color: wheat; }
-      main article.forord .circles #mission-visionCircle {
-        background-color: wheat; }
       main article.forord .circles #værdierCircle {
+        background-color: wheat; }
+      main article.forord .circles #missionCircle {
+        background-color: wheat; }
+      main article.forord .circles #visionCircle {
         background-color: wheat; }
   main article.produkter {
     position: relative;
@@ -209,8 +213,8 @@ main {
         main article.om .omContent .omHeader h2 {
           width: 82vw;
           padding-right: 12vw; }
-    main article.om #bottom-divider {
-      display: none; }
+  main #bottom-divider {
+    display: none; }
   main article.kontakt {
     margin: 10vh 0; }
     main article.kontakt .kontaktFormular {
@@ -316,35 +320,34 @@ footer {
   main .filler {
     height: 10vh; }
   main article.forord {
-    min-height: 75vh; }
-    main article.forord .triangle-divider {
-      height: 35vh; }
+    min-height: 75vh;
+    word-break: break-all; }
     main article.forord .circles {
       display: flex;
       justify-content: center;
-      margin-top: -22vh !important; }
-      main article.forord .circles .kortOm {
-        order: 2; }
-      main article.forord .circles .m-s {
-        order: 1; }
+      margin-top: -17vh !important; }
       main article.forord .circles .værdierFelt {
+        order: 2; }
+      main article.forord .circles .missionFelt {
+        order: 1; }
+      main article.forord .circles .visionFelt {
         order: 3; }
-      main article.forord .circles .værdierFelt,
-      main article.forord .circles .m-s {
+      main article.forord .circles .missionFelt,
+      main article.forord .circles .visionFelt {
         margin-top: 3vh; }
       main article.forord .circles .circle {
         width: 170px !important;
         height: 170px !important; }
-      main article.forord .circles .kortOm,
       main article.forord .circles .værdierFelt,
-      main article.forord .circles .m-s {
+      main article.forord .circles .missionFelt,
+      main article.forord .circles .visionFelt {
         z-index: 1;
         width: 30vw;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px; }
-      main article.forord .circles .kortOm:hover,
       main article.forord .circles .værdierFelt:hover,
-      main article.forord .circles .m-s:hover {
+      main article.forord .circles .missionFelt:hover,
+      main article.forord .circles .visionFelt:hover {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
       main article.forord .circles .textbox {
         padding: 0 5vw !important;
@@ -424,7 +427,7 @@ footer {
     main article.services p {
       padding: 0 5vw; }
   main article.om {
-    min-height: 60vh; }
+    min-height: 80vh; }
     main article.om #base-divider:before {
       border-left: 49vw solid transparent;
       border-right: 49vw solid transparent; }
@@ -443,6 +446,35 @@ footer {
           padding-right: 25%; }
         main article.om .omContainer .omContent p {
           padding: 0 1vw; }
+    main article.om #bottom-divider {
+      display: block;
+      background: #333;
+      height: 10vh;
+      position: absolute;
+      bottom: 0;
+      width: 100%; }
+    main article.om #bottom-divider:before {
+      border-top: 5vh solid white;
+      border-left: 50vw solid transparent;
+      border-right: 50vw solid transparent;
+      content: "";
+      height: 0;
+      left: 0;
+      position: absolute;
+      bottom: 5.2vh;
+      width: 0; }
+  main #bottom-divider {
+    display: block;
+    background: #333;
+    position: relative;
+    width: 100%; }
+  main #bottom-divider:before {
+    border-top: 5vh solid white;
+    border-left: 50vw solid transparent;
+    border-right: 50vw solid transparent;
+    content: "";
+    position: absolute;
+    top: 0; }
   main article.kontakt {
     background-image: url(img/map.jpg);
     /* KILDE: https://desenio.dk/dk/artiklar/world-map-grey-plakat-2.html */

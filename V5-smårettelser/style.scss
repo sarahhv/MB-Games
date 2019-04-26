@@ -78,20 +78,21 @@ p {
 
     #navItems {
         display: none;
-    }
+        list-style-type: none;
 
-    a {
-        color: white;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 0.9em;
-        display: block;
-        font-family: $p-family;
-    }
-
-    a:active,
-    a:hover {
-        color: $yellow !important;
+        a {
+            color: white;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 1.1em;
+            display: block;
+            font-family: $p-family;
+        }
+    
+        a:active,
+        a:hover {
+            color: $yellow !important;
+        }
     }
 
     .icon {
@@ -117,12 +118,17 @@ main {
 
         .triangle-divider {
             width: 100%;
-            height: 25vh;
+            height: auto;
             box-sizing: content-box;
             position: relative;
             background-color: $grey;
             background-position: center;
             background-size: cover;
+
+            p {
+                padding: 2vh 5vw 20vh;
+                color: white;
+            }
         }
 
         .triangle-divider:after {
@@ -158,15 +164,15 @@ main {
                 background-repeat: no-repeat;
             }
 
-            #kortInfo {
-                background-color: wheat;
-            }
-
-            #mission-visionCircle {
-                background-color: wheat;
-            }
-
             #værdierCircle {
+                background-color: wheat;
+            }
+
+            #missionCircle {
+                background-color: wheat;
+            }
+
+            #visionCircle {
                 background-color: wheat;
             }
         }
@@ -319,12 +325,11 @@ main {
                 }
             }
         }
-
-        #bottom-divider {
-            display: none;
-        }
     }
 
+    #bottom-divider {
+        display: none;
+    }
     /* KILDE: https://css-tricks.com/the-shapes-of-css/ */
 
     article.kontakt {
@@ -480,30 +485,27 @@ footer {
 
         article.forord {
             min-height: 75vh;
-
-            .triangle-divider {
-                height: 35vh;
-            }
+            word-break: break-all;
 
             .circles {
                 display: flex;
                 justify-content: center;
-                margin-top: -22vh !important;
+                margin-top: -17vh !important;
     
-                .kortOm {
+                .værdierFelt {
                     order: 2;
                 }
     
-                .m-s {
+                .missionFelt {
                     order: 1;
                 }
     
-                .værdierFelt {
+                .visionFelt {
                     order: 3;
                 }
     
-                .værdierFelt,
-                .m-s {
+                .missionFelt,
+                .visionFelt {
                     margin-top: 3vh;
                 }
     
@@ -512,18 +514,18 @@ footer {
                     height: 170px !important;
                 }
     
-                .kortOm,
                 .værdierFelt,
-                .m-s {
+                .missionFelt,
+                .visionFelt {
                     z-index: 1;
                     width: 30vw;
                     border-top-left-radius: 10px;
                     border-top-right-radius: 10px;
                 }
     
-                .kortOm:hover,
                 .værdierFelt:hover,
-                .m-s:hover {
+                .missionFelt:hover,
+                .visionFelt:hover {
                     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
                 }
     
@@ -643,7 +645,7 @@ footer {
         }
 
         article.om {
-            min-height: 60vh;
+            min-height: 80vh;
 
             #base-divider:before {
                 border-left: 49vw solid transparent;
@@ -674,6 +676,43 @@ footer {
                     }
                 }
             }
+
+            #bottom-divider {
+                display: block;
+                background: $grey;
+                height: 10vh;
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+            }
+    
+            #bottom-divider:before {
+                border-top: 5vh solid white;
+                border-left: 50vw solid transparent;
+                border-right: 50vw solid transparent;
+                content: "";
+                height: 0;
+                left: 0;
+                position: absolute;
+                bottom: 5.2vh;
+                width: 0;
+            }
+        }
+
+        #bottom-divider {
+            display: block;
+            background: $grey;
+            position: relative;
+            width: 100%;
+        }
+
+        #bottom-divider:before {
+            border-top: 5vh solid white;
+            border-left: 50vw solid transparent;
+            border-right: 50vw solid transparent;
+            content: "";
+            position: absolute;
+            top: 0;
         }
 
         article.kontakt {

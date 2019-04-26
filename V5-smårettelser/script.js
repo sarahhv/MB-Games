@@ -6,12 +6,18 @@ document.getElementById("navItems").addEventListener("click", navFunction)
 function navFunction() {
 	var x = document.getElementById("navItems");
 	var z = document.getElementById("nav");
+	var main = document.querySelector("main");
+	var footer = document.querySelector("footer");
 	if (x.style.display === "block" && $(window).width() <=1024) {
 		x.style.display = "none";
 		z.style.height = "7vh";
+		main.style.filter = "blur(0px)";
+		footer.style.filter = "blur(0px)";
 	} else if ($(window).width() <=1024) {
 		x.style.display = "block";
 		z.style.height = "auto";
+		main.style.filter = "blur(5px)";
+		footer.style.filter = "blur(5px)";
 	} else {
 		x.style.display = "flex";
 		z.style.height = "10vh";
