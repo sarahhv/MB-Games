@@ -1,0 +1,729 @@
+/* Make the default for margin and padding 0 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Defaults */
+// Fonts
+$h-family: "Segoe UI",
+sans-serif;
+$p-family: "Open Sans",
+sans-serif;
+
+// Colors
+$grey: #333;
+$greyOff: #444;
+$red: #b53028;
+$orange: #d78642;
+$yellow: #d6af72;
+$purple: #6b2636;
+
+// Measurements 
+$nav-height: 7vh;
+$content-padding: 3vh 5vw 0;
+
+h1,
+h2 {
+    text-align: center;
+    margin: auto auto;
+    text-transform: uppercase;
+    font-family: $h-family;
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: 900;
+    color: transparent;
+    background: url(img/yellow.png);
+    -webkit-background-clip: text;
+    background-position: center;
+
+    /* Billede som text farve KILDE: http://nimbupani.com/using-background-clip-for-text-with-css-fallback.html */
+}
+
+h2 {
+    color: $orange;
+    font-size: 1.3em;
+    font-weight: 800;
+}
+
+p {
+    color: black;
+    font-family: $p-family;
+    font-size: 0.9em;
+    margin-top: 1vh;
+}
+
+
+/* Navigationbaren */
+#nav {
+    overflow: hidden;
+    background-color: $grey;
+    border-bottom: solid $greyOff 2px;
+    border-top: solid $greyOff 2px;
+    position: fixed;
+    height: $nav-height;
+    z-index: 5;
+    width: 100%;
+    top: 0;
+
+    #navLogo {
+        text-align: left;
+        margin-left: 3vw;
+        color: white;
+    }
+
+    #navItems {
+        display: none;
+    }
+
+    a {
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 0.9em;
+        display: block;
+        font-family: $p-family;
+    }
+
+    a:active,
+    a:hover {
+        color: $yellow !important;
+    }
+
+    .icon {
+        color: white;
+        font-size: 2em;
+        background: transparent;
+        border: none;
+        display: block;
+        position: absolute;
+        height: 6vh;
+        right: 3vw;
+        top: 0;
+        margin: 0.5vh 0;
+    }
+}
+
+main {
+    .filler {
+        height: $nav-height;
+    }
+
+    article.forord {
+
+        .triangle-divider {
+            width: 100%;
+            height: 25vh;
+            box-sizing: content-box;
+            position: relative;
+            background-color: $grey;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .triangle-divider:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            border-bottom: 5vh solid white;
+            border-left: 50vw solid transparent;
+            border-right: 50vw solid transparent;
+        }
+
+
+        /*KILDE: https://css-tricks.com/the-shapes-of-css/ FLAG*/
+
+        .circles {
+            padding: $content-padding;
+            margin-top: -20vh;
+
+            .textbox {
+                margin: 3vh auto 0;
+                padding: 0 2vw;
+                width: 300px;
+            }
+
+            .circle {
+                margin: auto;
+                position: relative;
+                border-radius: 50%;
+                width: 150px;
+                height: 150px;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+            #kortInfo {
+                background-color: wheat;
+            }
+
+            #mission-visionCircle {
+                background-color: wheat;
+            }
+
+            #værdierCircle {
+                background-color: wheat;
+            }
+        }
+
+    }
+
+    article.produkter {
+        position: relative;
+        overflow: hidden;
+
+        .skew {
+            position: absolute;
+            width: 100%;
+            height: 20vh;
+            background-color: $grey;
+            transform: skewY(-6deg);
+            transform-origin: top-left;
+            z-index: -1;
+        }
+
+        h1 {
+            margin-top: 3vh;
+        }
+
+        .pFirkanter {
+            padding: $content-padding;
+        }
+
+        .pFirkant {
+            margin: auto;
+            width: 300px;
+            height: 150px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #p1 {
+            background-image: url(img/orange.png);
+        }
+
+        #p2 {
+            background-image: url(img/purple.png);
+        }
+
+        #p3 {
+            background-image: url(img/red.png);
+        }
+
+        .dot-container {
+            display: none;
+        }
+
+        .textbox {
+            margin: 3vh auto;
+            padding: 0 2vw;
+            width: 300px;
+        }
+
+        a {
+            color: $red;
+        }
+    }
+
+    article.services {
+        padding: 3vh 0;
+        background-color: $grey;
+
+        #sFelter {
+            padding: $content-padding;
+        }
+
+        #headerFelt1 {
+            border-top: solid white 1px;
+        }
+
+        .headerFelt {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+            height: 5vh;
+            padding: 0 5vw;
+            border-bottom: solid white 1px;
+
+            h2 {
+                margin: 0;
+                text-align: left;
+            }
+
+            .ui-icon {
+                color: $orange;
+            }
+        }
+
+        p {
+            color: white;
+        }
+    }
+
+    #om {
+        background-color: $grey;
+    }
+
+    article.om {
+
+        #base-divider {
+            background: $grey;
+            display: inline-block;
+            height: 10vh;
+            position: relative;
+            width: 100%;
+        }
+
+        #base-divider:before {
+            border-top: 5vh solid $grey;
+            border-left: 50vw solid transparent;
+            border-right: 50vw solid transparent;
+            content: "";
+            height: 0;
+            left: 0;
+            position: absolute;
+            bottom: -4.9vh;
+            width: 0;
+        }
+
+        .omContainer {
+            margin-top: 5vh;
+        }
+
+        .omContent {
+            margin-top: 2vh;
+            padding: $content-padding;
+
+            .omHeader {
+                display: flex;
+                border-bottom: solid $grey 1px;
+
+                i {
+                    font-size: 3em;
+                    width: 12vw;
+                    overflow: hidden;
+                    color: $orange;
+                }
+
+                h2 {
+                    width: 82vw;
+                    padding-right: 12vw;
+                }
+            }
+        }
+    }
+
+    /* KILDE: https://css-tricks.com/the-shapes-of-css/ */
+
+    article.kontakt {
+        margin-bottom: 10vh;
+
+        .kontaktFormular {
+            padding: $content-padding;
+        }
+
+        .kontaktInfo {
+            display: none;
+        }
+
+        input,
+        textarea {
+            padding: 2vh 2vw;
+            border-radius: 4px;
+        }
+
+        input[type=text],
+        input[type=number],
+        textarea {
+            width: 100%;
+            margin-bottom: 3vh;
+            border: 1px solid $grey;
+            font-family: $p-family;
+        }
+
+        #besked {
+            height: 20vh;
+        }
+
+        input[type=button] {
+            width: 30%;
+            background-color: $red;
+            border: none;
+            color: white;
+            font-family: $p-family;
+            font-weight: bold;
+        }
+
+        input[type=button]:hover,
+        input[type=button]:active {
+            background-color: $purple;
+        }
+
+        #talkbubble {
+            width: 85%;
+            height: 15vh;
+            margin-left: 10vw;
+            background: $grey;
+            position: relative;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+
+            h1 {
+                padding: 5vh 5vw 5vh 0;
+            }
+        }
+
+        #talkbubble:before {
+            content: "";
+            position: absolute;
+            right: 100%;
+            top: 5vh;
+            border-top: 3vh solid transparent;
+            border-right: 5vw solid $grey;
+            border-bottom: 3vh solid transparent;
+        }
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    height: $nav-height;
+    width: 100%;
+    padding: 0.5vh 15vw;
+    font-size: 2.15em;
+    background-color: $grey;
+    border-top: solid $greyOff 2px;
+    border-bottom: solid $greyOff 2px;
+
+    a {
+        color: white;
+        height: 6vh;
+    }
+
+    a:active {
+        color: $yellow !important;
+    }
+}
+
+@media screen and (min-width: 1023px) {
+    $nav-heightPC: 10vh;
+
+    p {
+        font-size: 1em;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    #nav {
+        display: flex;
+        height: $nav-heightPC !important;
+
+        #icon {
+            display: none;
+        }
+
+        #navItems {
+            display: flex;
+            justify-content: flex-end;
+            width: 67vw;
+            list-style-type: none;
+            margin: auto 3vw auto 0;
+
+            li {
+                float: right;
+
+                a {
+                    display: block;
+                    color: white;
+                    text-align: center;
+                    padding: 0px 16px;
+                    text-decoration: none;
+                    font-size: 1.3em;
+                    font-family: $p-family;
+                }
+            }
+
+            .remove {
+                display: none;
+            }
+        }
+    }
+
+    main {
+        .filler {
+            height: $nav-heightPC;
+        }
+
+        article.forord {
+            min-height: 75vh;
+
+            .triangle-divider {
+                height: 35vh;
+            }
+
+            .circles {
+                display: flex;
+                justify-content: center;
+                margin-top: -22vh !important;
+    
+                .kortOm {
+                    order: 2;
+                }
+    
+                .m-s {
+                    order: 1;
+                }
+    
+                .værdierFelt {
+                    order: 3;
+                }
+    
+                .værdierFelt,
+                .m-s {
+                    margin-top: 3vh;
+                }
+    
+                .circle {
+                    width: 170px !important; 
+                    height: 170px !important;
+                }
+    
+                .kortOm,
+                .værdierFelt,
+                .m-s {
+                    z-index: 1;
+                    width: 30vw;
+                    border-top-left-radius: 10px;
+                    border-top-right-radius: 10px;
+                }
+    
+                .kortOm:hover,
+                .værdierFelt:hover,
+                .m-s:hover {
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                }
+    
+                .textbox {
+                    padding: 0 5vw !important;
+                    width: 30vw !important;
+                }
+            }
+        }
+
+        article.produkter {
+            min-height: 80vh;
+
+            .skew {
+                height: 25vh;
+            }
+
+            .pFirkanter {
+                position: relative;
+                margin: 0 auto;
+                padding: 5vh 10vw 5vh !important;
+                width: 100%;
+                height: 75vh;
+    
+                .pFelt {
+                    display: none;
+                    justify-content: space-between;
+                    overflow: hidden;
+                    flex-direction: row-reverse;
+                    height: 100%;
+                    background-color: white;
+                    box-shadow: 0px -5px 20px 0 rgba(0, 0, 0, 0.2), 0 -20px 20px 0 rgba(0, 0, 0, 0.19);
+                    
+    
+                    a {
+                        width: 45%;
+                        height: 100%;
+    
+                        .pFirkant {
+                            height: 100%;
+                            width: 100%;
+                            position: relative;
+                            animation-name: image;
+                            animation-duration: 1s;
+                            animation-direction: alternate;
+                            box-shadow: inset 0 5px 5px 0 rgb(255, 255, 255), inset 0 5px 5px 0 rgb(255, 255, 255);
+                        }
+                    }
+    
+                    .dot-container {
+                        position: absolute;
+                        display: grid;
+                        justify-content: center;
+                        align-self: center;
+                        left: 45%;
+                        width: 10%;
+        
+                        /* The dots/bullets/indicators */
+                        .dot {
+                            cursor: pointer;
+                            padding: 20%;
+                            text-align: center;
+                            font-weight: 900;
+                            font-size: 1em;
+                            font-family: $p-family;
+                            color: $red;
+                            opacity: .3;
+                        }
+    
+                        .active,
+                        .dot:hover {
+                            text-decoration: underline;
+                            opacity: 1;
+                            transform: scale(1.3);
+                        }
+                    }
+    
+                    .textbox {
+                        display: block;
+                        position: relative;
+                        width: 45% !important;
+                        height: 70%;
+                        margin: auto 0;
+                        animation-name: text;
+                        animation-duration: 1s;
+                        animation-direction: alternate;
+                    }
+                }
+            }
+
+            @keyframes text {
+                from {
+                    top: -50vh;
+                }
+    
+                to {
+                    top: 0vh;
+                }
+            }
+    
+            @keyframes image {
+                from {
+                    top: 50vh;
+                }
+    
+                to {
+                    top: 0vh;
+                }
+            }
+        }
+
+        article.services{
+            min-height: 50vh;
+            p {
+                padding: 0 5vw;
+            }
+        }
+
+        article.om {
+            min-height: 70vh;
+
+            #base-divider:before {
+                border-left: 49vw solid transparent;
+                border-right: 49vw solid transparent;
+            }
+
+            .omContainer {
+                display: flex;
+                flex-flow: wrap;
+                justify-content: space-between;
+
+                .omContent {
+                    width: 50%;
+
+                    i {
+                    font-size: 4em;
+                    width: 25%;
+                    text-align: center;
+                    }
+
+                    h2 {
+                        width: 75%;
+                        padding-right: 25%;
+                    }
+
+                    p {
+                        padding: 0 1vw;
+                    }
+                }
+            }
+        }
+
+        article.kontakt {
+            background-image: url(img/map.jpg);
+            /* KILDE: https://desenio.dk/dk/artiklar/world-map-grey-plakat-2.html */
+            background-size: 110% 110%;
+            background-repeat: no-repeat;
+            background-position: center 5vh;
+            min-height: 80vh; 
+            display: flex;
+            flex-direction: row-reverse;
+
+            #talkbubble {
+                width: 45%;
+                margin: auto;
+            }
+
+            form {
+                width: 50%;
+                margin: auto;
+
+                .kontaktInfo {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 3vh;
+                    background-color: rgba(255, 255, 255, 0.8);
+                    
+                    .mail_tlf {
+                        width: 50%;
+                    }
+
+                    a {
+                        text-decoration: none;
+                    }
+    
+                    p {
+                        color: $red;
+                    }
+
+                    .soMe {
+                        width: 50%;
+                        text-align: center;
+                        align-self: center;
+    
+                        a {
+                            color: $red;
+                            height: 6vh;
+                            font-size: 3em;
+                        }
+                    
+                        a:active, a:hover {
+                            color: $purple !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        display: none;
+    }
+}
