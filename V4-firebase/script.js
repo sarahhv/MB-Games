@@ -118,7 +118,10 @@ document.getElementById("send").addEventListener('click', () => {
             besked: besked
         });
 		document.getElementById("kontaktFormular").reset();
-		alert("Mange tak for din besked, du vil blive kontaktet hurtigst muligt");
+		document.getElementById("alert").style.display = "block";
+		setTimeout(function(){
+			document.getElementById("alert").style.display = "none";
+		},5000);
 
     } else {
         alert("Venligst indtast dit navn, din email og din besked");

@@ -719,6 +719,11 @@ footer {
                         }
                     }
                 }
+
+                #alert {
+                    color: $red;
+                    display: none;
+                }
             }
         }
     }

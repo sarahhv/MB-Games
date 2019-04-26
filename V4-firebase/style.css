@@ -472,6 +472,9 @@ footer {
             font-size: 3em; }
           main article.kontakt form .kontaktInfo .soMe a:active, main article.kontakt form .kontaktInfo .soMe a:hover {
             color: #6b2636 !important; }
+      main article.kontakt form #alert {
+        color: #b53028;
+        display: none; }
 
   footer {
     display: none; } }
