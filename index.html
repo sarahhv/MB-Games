@@ -25,8 +25,9 @@
             <h1 id="navLogo">MB GAMES</h1>
             <ul id="navItems">
                 <li><a href="#forord">Forord</a></li>
-                <li><a href="#vision">Vision</a></li>
-                <li><a href="#mission">Mission</a></li>
+                <li><a href="#værdier" class="remove">Værdier</a></li>
+                <li><a href="#mission" class="remove">Mission</a></li>
+                <li><a href="#vision" class="remove">Vision</a></li>
                 <li><a href="#produkter">Produkter</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#om">Om MB-Games</a></li>
@@ -43,41 +44,50 @@
         <article class="forord">
             <div class="triangle-divider">
                 <h1>forord</h1>
+                <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum magnam labore nam, ut
+                        veniam
+                        iste
+                        eius vel! Sint cupiditate illum totam libero molestiae ipsa ut enim sapiente sed
+                        repellendus.
+                        Repellat.
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur laborum quas optio unde cupiditate iure fuga error est et beatae quae, sequi perferendis autem debitis ex rerum alias repellat totam.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae nostrum, reprehenderit explicabo ad tempore, ratione expedita et amet rem repudiandae consequatur vitae aliquam ipsam necessitatibus molestias vel, repellat sed ducimus!
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae nostrum, reprehenderit explicabo ad tempore, ratione expedita et amet rem repudiandae consequatur vitae aliquam ipsam necessitatibus molestias vel, repellat sed ducimus!
+                </p>
             </div>
             <section class="circles">
-                <figure class="circle" id="c1"></figure>
-                <div class="textbox">
-                    <h2>Kort om MB-Games</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum magnam labore nam, ut veniam
-                        iste
-                        eius vel! Sint cupiditate illum totam libero molestiae ipsa ut enim sapiente sed repellendus.
-                        Repellat.
-                    </p>
-                </div>
-
-                <div class="filler" id="vision"></div>
-                <figure class="circle" id="visionCircle"></figure>
-                <div class="textbox">
-                    <h2>Vision</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum magnam labore nam, ut veniam
-                        iste
-                        eius vel! Sint cupiditate illum totam libero molestiae ipsa ut enim sapiente sed repellendus.
-                        Repellat.
-                    </p>
+                <div class="filler" id="værdier"></div>
+                <div class="værdierFelt">
+                    <figure class="circle" id="værdierCircle"></figure>
+                    <div class="textbox">
+                        <h2>Værdier</h2>
+                        <p>
+                            Alt hvad MB Games gør, har til formål at øge viden og indlæring hos elever og studerende uden at de føler de bliver testet. 
+                        </p>
+                    </div>
                 </div>
 
                 <div class="filler" id="mission"></div>
-                <figure class="circle" id="missionCircle"></figure>
-                <div class="textbox">
-                    <h2>Mission</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum magnam labore nam, ut veniam
-                        iste
-                        eius vel! Sint cupiditate illum totam libero molestiae ipsa ut enim sapiente sed repellendus.
-                        Repellat.
-                    </p>
+                <div class="missionFelt">
+                    <figure class="circle" id="missionCircle"></figure>
+                    <div class="textbox">
+                        <h2>Mission</h2>
+                        <p>
+                            "MB Games stimulerer læringslysten i elever og studerende. Dette gøres ved at lave læringsrige spil, der opstiller virkelighedstro situationer, der er med til at gøre læring sjov."
+                        </p>
+                    </div>
+                </div>
+
+                <div class="filler" id="vision"></div>
+                <div class="visionFelt">
+                    <figure class="circle" id="visionCircle"></figure>
+                    <div class="textbox">
+                        <h2>Vision</h2>
+                        <p>
+                            "MB Games ønsker at være den fortrukne leverandør af læringsrige spil, der motiver elever og studerende til at lære mere. "
+                        </p>
+                    </div>
                 </div>
             </section>
         </article>
@@ -87,35 +97,71 @@
             <figure class="skew"></figure>
             <h1>produkter</h1>
             <section class="pFirkanter">
-                <figure class="pFirkant" id="p1"></figure>
-                <div class="textbox">
-                    <h2>Produkt 1</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum magnam labore nam, ut veniam
-                        iste
-                        eius vel! Sint cupiditate illum totam libero molestiae ipsa ut enim sapiente sed repellendus.
-                        Repellat.
-                    </p>
+
+                <div class="pFelt">
+                    <a href="#">
+                        <figure class="pFirkant" id="p1"></figure>
+                    </a>
+                    <div class="dot-container">
+                        <span class="dot active" onclick="currentSlide(1)">01</span>
+                        <span class="dot" onclick="currentSlide(2)">02</span>
+                        <span class="dot" onclick="currentSlide(3)">03</span>
+                    </div>
+                    <div class="textbox">
+                        <h2>Produkt 1</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis enim consequatur nam
+                            repellat, odit culpa nemo autem, error, expedita illo architecto reiciendis nobis
+                            reprehenderit quo at numquam consectetur blanditiis provident.
+                        </p>
+                        <a href="#">Se produktet her...</a>
+                    </div>
                 </div>
-                <figure class="pFirkant" id="p2"></figure>
-                <div class="textbox">
-                    <h2>Produkt 2</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum magnam labore nam, ut veniam
-                        iste
-                        eius vel! Sint cupiditate illum totam libero molestiae ipsa ut enim sapiente sed repellendus.
-                        Repellat.
-                    </p>
+
+                <div class="pFelt">
+                    <a href="#">
+                        <figure class="pFirkant" id="p2"></figure>
+                    </a>
+                    <div class="dot-container">
+                        <span class="dot" onclick="currentSlide(1)">01</span>
+                        <span class="dot active" onclick="currentSlide(2)">02</span>
+                        <span class="dot" onclick="currentSlide(3)">03</span>
+                    </div>
+                    <div class="textbox">
+                        <h2>Produkt 2</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum magnam labore nam, ut
+                            veniam
+                            iste
+                            eius vel! Sint cupiditate illum totam libero molestiae ipsa ut enim sapiente sed
+                            repellendus.
+                            Repellat.
+                        </p>
+                        <a href="#">Se produktet her...</a>
+                    </div>
                 </div>
-                <figure class="pFirkant" id="p3"></figure>
-                <div class="textbox">
-                    <h2>Produkt 3</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum magnam labore nam, ut veniam
-                        iste
-                        eius vel! Sint cupiditate illum totam libero molestiae ipsa ut enim sapiente sed repellendus.
-                        Repellat.
-                    </p>
+
+                <div class="pFelt">
+                    <a href="#">
+                        <figure class="pFirkant" id="p3"></figure>
+                    </a>
+                    <div class="dot-container">
+                        <span class="dot" onclick="currentSlide(1)">01</span>
+                        <span class="dot" onclick="currentSlide(2)">02</span>
+                        <span class="dot active" onclick="currentSlide(3)">03</span>
+                    </div>
+                    <div class="textbox">
+                        <h2>Produkt 3</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum magnam labore nam, ut
+                            veniam
+                            iste
+                            eius vel! Sint cupiditate illum totam libero molestiae ipsa ut enim sapiente sed
+                            repellendus.
+                            Repellat.
+                        </p>
+                        <a href="#">Se produktet her...</a>
+                    </div>
                 </div>
             </section>
         </article>
@@ -169,51 +215,85 @@
             <div id="base-divider">
                 <h1>Om MB-Games</h1>
             </div>
-            <section class="omContent">
-                <div class="omHeader">
-                    <i class="fab fa-android"></i>
-                    <h2>Header one</h2>
+            <section class="omContainer">
+                <div class="omContent">
+                    <div class="omHeader">
+                        <i class="fab fa-android"></i>
+                        <h2>Header one</h2>
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet ex natus, blanditiis, iusto in
+                        et
+                        sed totam fuga nostrum at adipisci harum suscipit nam maxime enim, aspernatur porro quam
+                        ratione.
+                    </p>
                 </div>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet ex natus, blanditiis, iusto in et
-                    sed totam fuga nostrum at adipisci harum suscipit nam maxime enim, aspernatur porro quam ratione.
-                </p>
-            </section>
-            <section class="omContent">
-                <div class="omHeader">
-                    <i class="fab fa-android"></i>
-                    <h2>Header one</h2>
+                <div class="omContent">
+                    <div class="omHeader">
+                        <i class="fab fa-android"></i>
+                        <h2>Header one</h2>
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet ex natus, blanditiis, iusto in
+                        et
+                        sed totam fuga nostrum at adipisci harum suscipit nam maxime enim, aspernatur porro quam
+                        ratione.
+                    </p>
                 </div>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet ex natus, blanditiis, iusto in et
-                    sed totam fuga nostrum at adipisci harum suscipit nam maxime enim, aspernatur porro quam ratione.
-                </p>
-            </section>
-            <section class="omContent">
-                <div class="omHeader">
-                    <i class="fab fa-android"></i>
-                    <h2>Header one</h2>
+                <div class="omContent">
+                    <div class="omHeader">
+                        <i class="fab fa-android"></i>
+                        <h2>Header one</h2>
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet ex natus, blanditiis, iusto in
+                        et
+                        sed totam fuga nostrum at adipisci harum suscipit nam maxime enim, aspernatur porro quam
+                        ratione.
+                    </p>
                 </div>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet ex natus, blanditiis, iusto in et
-                    sed totam fuga nostrum at adipisci harum suscipit nam maxime enim, aspernatur porro quam ratione.
-                </p>
             </section>
         </article>
 
-        <div class="filler" id="kontakt"></div>
-        <article class="kontakt">
-            <input type="text" id="navn" name="navn" placeholder="Dit navn">
+        <div class="filler" id="bottom-divider"></div>
+        <article class="kontakt" id="kontakt">
+            <div id="talkbubble">
+                <h1>Kontakt mig</h1>
+            </div>
+            <form class="kontaktFormular" id="kontaktFormular">
+                <h2> Skriv/Ring til mig på: </h2>
+                <div class="kontaktInfo">
+                    <br>
+                    <div class="mail_tlf">
+                        <a href="mailto:boetker1991@gmail.com">
+                            <p> mail: boetker1991@gmail.com</p>
+                        </a>
+                        <p> tel: +4528944439 </p>
+                    </div>
+                    <div class="soMe">
+                        <a href="#">
+                            <i class="fab fa-facebook-square"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/boetker1991/">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/incrediblepony">
+                            <i class="fab fa-github-square"></i>
+                        </a>
+                    </div>
+                </div>
+                <input type="text" id="navn" name="navn" placeholder="Dit navn *">
 
-            <input type="text" id="email" name="email" placeholder="Din E-mail">
+                <input type="text" id="email" name="email" placeholder="Din E-mail *">
 
-            <input type="number" id="tlf" name="tlf" placeholder="Dit telefonnummer">
+                <input type="number" id="tlf" name="tlf" placeholder="Dit telefonnummer">
 
-            <textarea id="besked" name="besked" placeholder="Skriv din besked..."></textarea>
+                <textarea id="besked" name="besked" placeholder="Skriv din besked... *"></textarea>
 
-            <input type="submit" value="SEND">
+                <input type="button" value="SEND" id="send">
+                <p id="alert">Mange tak for din besked, du vil blive kontaktet hurtigst muligt</p>
+            </form>
         </article>
-
     </main>
 
     <footer>
@@ -233,13 +313,14 @@
         <a href="tel:+4528944439">
             <i class="fas fa-phone-square"></i>
         </a>
-
-
     </footer>
+    
+    <!-- Firebase  -->
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
 
     <!-- Jquery library -->
     <script src="jquery-3.3.1.min.js"></script>
-
+    
     <!-- Jquery UI, set of interface interactions  -->
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
