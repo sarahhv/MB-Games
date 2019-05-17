@@ -326,8 +326,7 @@ footer {
   main .filler {
     height: 10vh; }
   main article.forord {
-    min-height: 75vh;
-    word-break: break-all; }
+    min-height: 75vh; }
     main article.forord .circles {
       display: flex;
       justify-content: center; }
@@ -447,7 +446,7 @@ footer {
     main article.services p {
       padding: 0 5vw; }
   main article.om {
-    min-height: 80vh; }
+    min-height: 60vh; }
     main article.om #base-divider:before {
       border-left: 49vw solid transparent;
       border-right: 49vw solid transparent; }
@@ -539,5 +538,3 @@ footer {
 
   footer {
     display: none; } }
-
-/*# sourceMappingURL=style.css.map */

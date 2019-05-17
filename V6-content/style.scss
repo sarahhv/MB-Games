@@ -491,7 +491,6 @@ footer {
 
         article.forord {
             min-height: 75vh;
-            word-break: break-all;
 
             .circles {
                 display: flex;
@@ -671,7 +670,7 @@ footer {
         }
 
         article.om {
-            min-height: 80vh;
+            min-height: 60vh;
 
             #base-divider:before {
                 border-left: 49vw solid transparent;

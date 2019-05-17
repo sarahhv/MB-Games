@@ -85,7 +85,7 @@ main {
       box-sizing: content-box;
       position: relative;
       background-color: #333;
-      background-image: url(img/206500840.png);
+      background-image: url(img/206500840.svg);
       background-position: center;
       background-size: 100% 100%;
       background-repeat: no-repeat; }
@@ -148,11 +148,11 @@ main {
       background-size: cover;
       background-repeat: no-repeat; }
     main article.produkter #p1 {
-      background-image: url(img/game.jpg); }
+      background-image: url(img/ozzyNdrix.svg); }
     main article.produkter #p2 {
-      background-image: url(img/game.jpg); }
+      background-image: url(img/apocalypseWorldWar1.svg); }
     main article.produkter #p3 {
-      background-image: url(img/game.jpg); }
+      background-image: url(img/DFVNu-uWsAEp9lO.svg); }
     main article.produkter .dot-container {
       display: none; }
     main article.produkter .textbox {
@@ -326,8 +326,7 @@ footer {
   main .filler {
     height: 10vh; }
   main article.forord {
-    min-height: 75vh;
-    word-break: break-all; }
+    min-height: 75vh; }
     main article.forord .circles {
       display: flex;
       justify-content: center; }
@@ -354,6 +353,10 @@ footer {
       main article.forord .circles .missionFelt:hover,
       main article.forord .circles .visionFelt:hover {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+        main article.forord .circles .værdierFelt:hover .circle,
+        main article.forord .circles .missionFelt:hover .circle,
+        main article.forord .circles .visionFelt:hover .circle {
+          background-color: #94d9c9; }
       main article.forord .circles .textbox {
         padding: 0 5vw !important;
         width: 30vw !important; }
@@ -386,6 +389,15 @@ footer {
             animation-duration: 1s;
             animation-direction: alternate;
             box-shadow: inset 0 5px 5px 0 white, inset 0 5px 5px 0 white; }
+          main article.produkter .pFirkanter .pFelt a .imgHover {
+            transition: .3s ease;
+            opacity: 0;
+            background-color: #6b2636;
+            width: 100%;
+            height: 100%;
+            display: block; }
+          main article.produkter .pFirkanter .pFelt a .pFirkant:hover .imgHover {
+            opacity: 0.6; }
         main article.produkter .pFirkanter .pFelt .textbox {
           display: block;
           position: relative;
@@ -395,6 +407,8 @@ footer {
           animation-name: text;
           animation-duration: 1s;
           animation-direction: alternate; }
+          main article.produkter .pFirkanter .pFelt .textbox a:hover {
+            color: #6b2636; }
       main article.produkter .pFirkanter .dot-container {
         position: absolute;
         display: grid;
@@ -428,11 +442,11 @@ footer {
     to {
       top: 0vh; } }
   main article.services {
-    min-height: 50vh; }
+    min-height: 40vh; }
     main article.services p {
       padding: 0 5vw; }
   main article.om {
-    min-height: 80vh; }
+    min-height: 60vh; }
     main article.om #base-divider:before {
       border-left: 49vw solid transparent;
       border-right: 49vw solid transparent; }
@@ -446,6 +460,8 @@ footer {
           font-size: 4em;
           width: 25%;
           text-align: center; }
+        main article.om .omContainer .omContent i:hover {
+          color: #6b2636; }
         main article.om .omContainer .omContent h2 {
           width: 75%;
           padding-right: 25%; }
@@ -482,7 +498,7 @@ footer {
     position: absolute;
     top: 0; }
   main article.kontakt {
-    background-image: url(img/map.jpg);
+    background-image: url(img/map.svg);
     /* KILDE: https://desenio.dk/dk/artiklar/world-map-grey-plakat-2.html */
     background-size: 110% 110%;
     background-repeat: no-repeat;

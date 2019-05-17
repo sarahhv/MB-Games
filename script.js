@@ -1,7 +1,7 @@
 /* Når der klikkes på hamburger-ikonet åbnes/lukkes navItems, der er selve menuen - afhængigt af om den er synlig eller ej  */
 document.getElementById("icon").addEventListener("click", navFunction);
 
-document.getElementById("navItems").addEventListener("click", navFunction)
+document.getElementById("navItems").addEventListener("click", navFunction);
 
 function navFunction() {
 	var x = document.getElementById("navItems");
@@ -35,14 +35,14 @@ document.getElementsByTagName("main")[0].addEventListener('click', () => {
 
 /* Når der klikkes på et navItem, er der en mere glidende scroll til det specifikke sted */
 $('a[href*="#"]').on('click', function (e) {
-	e.preventDefault()
+	e.preventDefault();
 
 	$(' html, body').animate({
 			scrollTop: $($(this).attr('href')).offset().top,
 		},
 		350,
 		'linear'
-	)
+	);
 });
 /* KILDE: https://www.taniarascia.com/smooth-scroll-to-id-with-jquery/ */
 
@@ -53,8 +53,8 @@ if ($(window).width() >= 1023) {
 
 	document.getElementById("dot1").addEventListener('click', () => {
 		showSlides(slideIndex = 1);
-	}); 
-	
+	});
+
 	document.getElementById("dot2").addEventListener('click', () => {
 		showSlides(slideIndex = 2);
 	});
@@ -62,30 +62,29 @@ if ($(window).width() >= 1023) {
 	document.getElementById("dot3").addEventListener('click', () => {
 		showSlides(slideIndex = 3);
 	});
-
-	function showSlides(n) {
-		var i;
-		var slides = document.getElementsByClassName("pFelt");
-		var dots = document.getElementsByClassName("dot");
-		if (n > slides.length) {
-			slideIndex = 1
-		}
-		if (n < 1) {
-			slideIndex = slides.length
-		}
-		for (i = 0; i < slides.length; i++) {
-			slides[i].style.display = "none";
-		}
-		for (i = 0; i < dots.length; i++) {
-				dots[i].className = dots[i].className.replace(" active", "");
-			}
-		slides[slideIndex - 1].style.display = "flex";
-		dots[slideIndex-1].className += " active";
-	}
-	/* KILDE: https://www.w3schools.com/howto/howto_js_slideshow.asp */
 }
 /* KILDE til screen-size: https://stackoverflow.com/questions/44588072/run-script-if-screen-size-is-more-than-x?answertab=votes&fbclid=IwAR3gNlpm8COR5CyBIn7IHzl4eNHmzsYvN3_xErWCucf_obf8P37VnNP6b-s#tab-top */
 
+function showSlides(n) {
+	var i;
+	var slides = document.getElementsByClassName("pFelt");
+	var dots = document.getElementsByClassName("dot");
+	if (n > slides.length) {
+		slideIndex = 1;
+	}
+	if (n < 1) {
+		slideIndex = slides.length;
+	}
+	for (i = 0; i < slides.length; i++) {
+		slides[i].style.display = "none";
+	}
+	for (i = 0; i < dots.length; i++) {
+		dots[i].className = dots[i].className.replace(" active", "");
+	}
+	slides[slideIndex - 1].style.display = "flex";
+	dots[slideIndex - 1].className += " active";
+}
+/* KILDE: https://www.w3schools.com/howto/howto_js_slideshow.asp */
 
 /* Service accordion, hentet fra Jquery UI, tilpasset til min egen kode */
 $(function () {
