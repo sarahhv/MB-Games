@@ -213,12 +213,12 @@ main {
         border-bottom: solid #333 1px; }
         main article.om .omContent .omHeader i {
           font-size: 3em;
-          width: 12vw;
+          width: 20%;
           overflow: hidden;
           color: #d78642; }
         main article.om .omContent .omHeader h2 {
-          width: 82vw;
-          padding-right: 12vw; }
+          width: 80%;
+          padding-right: 10%; }
   main #bottom-divider {
     display: none; }
   main article.kontakt {
@@ -458,13 +458,13 @@ footer {
         width: 33%; }
         main article.om .omContainer .omContent i {
           font-size: 4em;
-          width: 25%;
+          width: 30%;
           text-align: center; }
         main article.om .omContainer .omContent i:hover {
           color: #6b2636; }
         main article.om .omContainer .omContent h2 {
-          width: 75%;
-          padding-right: 25%; }
+          width: 70%;
+          padding-right: 20%; }
         main article.om .omContainer .omContent p {
           padding: 0 1vw; }
     main article.om #bottom-divider {
